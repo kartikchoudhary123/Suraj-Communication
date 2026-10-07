@@ -1,0 +1,23 @@
+.page-transition {
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+
+  will-change: opacity, transform;
+}
+
+.page-transition-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,419 @@
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-it-works {
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 80px 40px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.how-header {
+    max-width: 720px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.how-badge {
+    display: inline-block;
+
+    padding: 8px 17px;
+
+    border-radius: 50px;
+
+    background: #eaf2ff;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.how-header h2 {
+    margin: 0 0 14px;
+
+    color: #111827;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.how-header h2 span {
+    color: #2563eb;
+}
+
+
+.how-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.how-steps {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0;
+}
+
+
+.how-step-wrapper {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+.how-step {
+    width: 100%;
+
+    min-height: 255px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.045);
+
+    transition: all 0.3s ease;
+}
+
+
+.how-step:hover {
+    transform: translateY(-7px);
+
+    border-color: #dbe7ff;
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================
+   STEP TOP
+========================================= */
+
+.how-step-top {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+
+.step-number {
+    position: absolute;
+
+    top: -10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #dbe7ff;
+
+    font-size: 52px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    z-index: 0;
+}
+
+
+.step-icon {
+    position: relative;
+
+    z-index: 1;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 25px;
+
+    transition: all 0.3s ease;
+}
+
+
+.how-step:hover .step-icon {
+    background: #2563eb;
+
+    color: #ffffff;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.how-step h3 {
+    margin: 0 0 10px;
+
+    color: #111827;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.how-step p {
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.step-arrow {
+    flex-shrink: 0;
+
+    width: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.how-cta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding: 25px 30px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbe7ff;
+
+    border-radius: 18px;
+}
+
+
+.how-cta h3 {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: 18px;
+}
+
+
+.how-cta p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.how-cta button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 21px;
+
+    border: 2px solid #16a34a;
+
+    border-radius: 11px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.how-cta button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(22, 163, 74, 0.2);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .how-it-works {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    .how-steps {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .how-step-wrapper {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .step-arrow {
+        width: auto;
+
+        height: 35px;
+
+        transform: rotate(90deg);
+    }
+
+
+    .how-step {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .how-it-works {
+        padding: 60px 18px;
+    }
+
+
+    .how-header {
+        margin-bottom: 35px;
+    }
+
+
+    .how-header h2 {
+        font-size: 32px;
+    }
+
+
+    .how-header p {
+        font-size: 14px;
+    }
+
+
+    .how-step {
+        padding: 24px 20px;
+    }
+
+
+    .how-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 22px;
+    }
+
+
+    .how-cta button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

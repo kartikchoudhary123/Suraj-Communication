@@ -1,0 +1,518 @@
+.visit-shop {
+  padding: 100px 20px;
+  background: #f8fafc;
+}
+
+.visit-shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.visit-shop-heading {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.visit-shop-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 50px;
+
+  background: #eaf2ff;
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+.visit-shop-heading h2 {
+  margin: 0 0 15px;
+
+  color: #111827;
+
+  font-size: 42px;
+  line-height: 1.15;
+}
+
+.visit-shop-heading h2 span {
+  color: #2563eb;
+}
+
+.visit-shop-heading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* VIDEO */
+
+.visit-video-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #000;
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.15);
+
+  cursor: pointer;
+}
+
+.visit-video-wrapper:fullscreen {
+  width: 100vw;
+  height: 100vh;
+
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+}
+
+.visit-video-wrapper:fullscreen .visit-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.visit-video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  background: #000;
+}
+
+/* CENTER PLAY */
+
+.video-center-play {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 72px;
+  height: 72px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.95);
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  padding-left: 4px;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+
+  z-index: 5;
+
+  transition: 0.25s ease;
+}
+
+.video-center-play:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+
+  background: #1d4ed8;
+}
+
+/* CUSTOM CONTROLS */
+
+.custom-video-controls {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 0 18px 15px;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  z-index: 4;
+}
+
+/*
+  IMPORTANT:
+  Gradient is ONLY present when video is paused.
+*/
+
+.visit-video-wrapper.paused .custom-video-controls {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
+
+  padding-top: 65px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.custom-video-controls.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
+}
+
+/*
+  While playing:
+  controls can appear when mouse moves,
+  BUT NO GRADIENT.
+*/
+
+.visit-video-wrapper.playing .custom-video-controls {
+  background: transparent;
+}
+
+/* PROGRESS */
+
+.video-progress-wrapper {
+  width: 100%;
+
+  margin-bottom: 7px;
+}
+
+.video-progress {
+  width: 100%;
+
+  height: 4px;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  background: linear-gradient(
+    to right,
+    #2563eb var(--progress),
+    rgba(255, 255, 255, 0.35) var(--progress)
+  );
+
+  border-radius: 20px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.video-progress::-webkit-slider-thumb {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.video-progress::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+/* CONTROL ROW */
+
+.video-controls-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-left-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.video-control-btn {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+
+  transition: 0.2s ease;
+}
+
+.video-control-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.video-time {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+/* SHOP CTA */
+
+.visit-shop-bottom {
+  margin-top: 35px;
+
+  padding: 28px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.visit-shop-message h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 21px;
+}
+
+.visit-shop-message p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.visit-shop-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.visit-call-btn,
+.visit-whatsapp-btn {
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.visit-call-btn {
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.visit-call-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+.visit-whatsapp-btn {
+  background: #22c55e;
+
+  color: #ffffff;
+}
+
+.visit-whatsapp-btn:hover {
+  background: #16a34a;
+
+  transform: translateY(-2px);
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .visit-shop {
+    padding: 75px 18px;
+  }
+
+  .visit-shop-heading h2 {
+    font-size: 34px;
+  }
+
+  .visit-shop-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .visit-shop-buttons {
+    width: 100%;
+  }
+
+  .visit-call-btn,
+  .visit-whatsapp-btn {
+    flex: 1;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .visit-shop-heading {
+    margin-bottom: 35px;
+  }
+
+  .visit-shop-heading h2 {
+    font-size: 30px;
+  }
+
+  .visit-shop-heading p {
+    font-size: 14px;
+  }
+
+  .visit-video-wrapper {
+    border-radius: 15px;
+  }
+
+  .video-center-play {
+    width: 58px;
+    height: 58px;
+
+    font-size: 19px;
+  }
+
+  .custom-video-controls {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .visit-video-wrapper.paused .custom-video-controls {
+    padding-top: 45px;
+  }
+
+  .video-left-controls {
+    gap: 5px;
+  }
+
+  .video-control-btn {
+    width: 30px;
+    height: 30px;
+
+    font-size: 13px;
+  }
+
+  .video-time {
+    font-size: 11px;
+  }
+
+  .visit-shop-bottom {
+    padding: 22px 20px;
+  }
+
+  .visit-shop-buttons {
+    flex-direction: column;
+  }
+
+  .visit-call-btn,
+  .visit-whatsapp-btn {
+    width: 100%;
+  }
+}
